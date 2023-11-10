@@ -1,0 +1,1192 @@
+[
+  {
+    "type": "assign_stmt",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignable",
+          "named": true
+        },
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assignable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "deref_write",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_exp",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "lhs": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "alloc",
+            "named": false
+          },
+          {
+            "type": "binary_exp",
+            "named": true
+          },
+          {
+            "type": "fun_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "input",
+            "named": false
+          },
+          {
+            "type": "null",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "paren_exp",
+            "named": true
+          },
+          {
+            "type": "record_exp",
+            "named": true
+          },
+          {
+            "type": "record_field_access",
+            "named": true
+          },
+          {
+            "type": "unary_exp",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "alloc",
+            "named": false
+          },
+          {
+            "type": "binary_exp",
+            "named": true
+          },
+          {
+            "type": "fun_call",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "input",
+            "named": false
+          },
+          {
+            "type": "null",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "paren_exp",
+            "named": true
+          },
+          {
+            "type": "record_exp",
+            "named": true
+          },
+          {
+            "type": "record_field_access",
+            "named": true
+          },
+          {
+            "type": "unary_exp",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "deref_write",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "error_stmt",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "block": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fun_block",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "fun_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assign_stmt",
+          "named": true
+        },
+        {
+          "type": "error_stmt",
+          "named": true
+        },
+        {
+          "type": "if_stmt",
+          "named": true
+        },
+        {
+          "type": "output_stmt",
+          "named": true
+        },
+        {
+          "type": "return_stmt",
+          "named": true
+        },
+        {
+          "type": "stmt_block",
+          "named": true
+        },
+        {
+          "type": "var_stmt",
+          "named": true
+        },
+        {
+          "type": "while_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun_call",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_stmt",
+    "named": true,
+    "fields": {
+      "else_branch": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "assign_stmt",
+            "named": true
+          },
+          {
+            "type": "error_stmt",
+            "named": true
+          },
+          {
+            "type": "if_stmt",
+            "named": true
+          },
+          {
+            "type": "output_stmt",
+            "named": true
+          },
+          {
+            "type": "stmt_block",
+            "named": true
+          },
+          {
+            "type": "while_stmt",
+            "named": true
+          }
+        ]
+      },
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "if_branch": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "assign_stmt",
+            "named": true
+          },
+          {
+            "type": "error_stmt",
+            "named": true
+          },
+          {
+            "type": "if_stmt",
+            "named": true
+          },
+          {
+            "type": "output_stmt",
+            "named": true
+          },
+          {
+            "type": "stmt_block",
+            "named": true
+          },
+          {
+            "type": "while_stmt",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "output_stmt",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_exp",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "program",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "fun",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "record_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_field",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_field_access",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_stmt",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmt_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assign_stmt",
+          "named": true
+        },
+        {
+          "type": "error_stmt",
+          "named": true
+        },
+        {
+          "type": "if_stmt",
+          "named": true
+        },
+        {
+          "type": "output_stmt",
+          "named": true
+        },
+        {
+          "type": "stmt_block",
+          "named": true
+        },
+        {
+          "type": "while_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_exp",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_stmt",
+    "named": true,
+    "fields": {
+      "identifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_exp",
+          "named": true
+        },
+        {
+          "type": "fun_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_field_access",
+          "named": true
+        },
+        {
+          "type": "stmt_block",
+          "named": true
+        },
+        {
+          "type": "unary_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "alloc",
+    "named": false
+  },
+  {
+    "type": "block_comment",
+    "named": true
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "error",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "input",
+    "named": false
+  },
+  {
+    "type": "line_comment",
+    "named": true
+  },
+  {
+    "type": "null",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "output",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "var",
+    "named": false
+  },
+  {
+    "type": "while",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

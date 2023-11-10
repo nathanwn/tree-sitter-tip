@@ -1,0 +1,173 @@
+==============================
+section 2.2 example 1
+==============================
+
+iterate(n) {
+    var f;
+    f = 1;
+    while (n>0) {
+        f = f*n;
+        n = n-1;
+    }
+    return f;
+}
+
+-------------------------------
+
+(program
+ (fun
+  (identifier)
+  (identifier)
+  (fun_block
+   (var_stmt
+    (identifier))
+   (assign_stmt
+    (assignable
+     (identifier))
+    (number))
+   (while_stmt
+    (binary_exp
+     (identifier)
+     (number))
+    (stmt_block
+     (assign_stmt
+      (assignable
+       (identifier))
+      (binary_exp
+       (identifier)
+       (identifier)))
+     (assign_stmt
+      (assignable
+       (identifier))
+      (binary_exp
+       (identifier)
+       (number)))))
+    (return_stmt
+     (identifier)))))
+
+
+==============================
+section 2.2 example 2
+==============================
+
+recurse(n) {
+    var f;
+    if (n==0) { f=1; }
+    else { f=n*recurse(n-1); }
+    return f;
+}
+
+------------------------------
+
+(program
+ (fun
+  (identifier)
+  (identifier)
+  (fun_block
+   (var_stmt
+    (identifier))
+   (if_stmt
+    (binary_exp
+     (identifier)
+     (number))
+    (stmt_block
+     (assign_stmt
+      (assignable
+       (identifier))
+      (number)))
+    (stmt_block
+     (assign_stmt
+      (assignable
+       (identifier))
+      (binary_exp
+       (identifier)
+       (fun_call
+        (identifier)
+        (binary_exp
+         (identifier)
+         (number)))))))
+    (return_stmt
+     (identifier)))))
+
+
+==============================
+section 2.2 example 3
+==============================
+
+foo(p,x) {
+    var f,q;
+    if (*p==0) { f=1; }
+    else {
+        q = alloc 0;
+        *q = (*p)-1;
+        f=(*p)*(x(q,x));
+    }
+    return f;
+}
+
+main() {
+    var n;
+    n = input;
+    return foo(&n,foo);
+}
+
+-------------------------------
+
+(program
+ (fun
+  (identifier)
+  (identifier)
+  (identifier)
+  (fun_block
+   (var_stmt
+    (identifier)
+    (identifier))
+   (if_stmt
+    (binary_exp
+     (identifier)
+     (number))
+    (stmt_block
+     (assign_stmt
+      (assignable
+       (identifier))
+      (number)))
+    (stmt_block
+     (assign_stmt
+      (assignable
+       (identifier))
+      (number))
+     (assign_stmt
+      (assignable
+       (deref_write
+        (identifier)))
+      (binary_exp
+       (paren_exp
+        (identifier))
+       (number)))
+     (assign_stmt
+      (assignable
+       (identifier))
+      (binary_exp
+       (paren_exp
+        (identifier))
+       (paren_exp
+        (fun_call
+         (identifier)
+         (identifier)
+         (identifier)))))))
+    (return_stmt
+     (identifier))))
+    (fun
+     (identifier)
+     (fun_block
+      (var_stmt
+       (identifier))
+      (assign_stmt
+       (assignable
+        (identifier)))
+      (return_stmt
+       (fun_call
+        (identifier)
+        (identifier)
+        (identifier))))))
+
